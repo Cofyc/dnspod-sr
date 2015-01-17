@@ -262,6 +262,14 @@ check_dms(uchar * ck, uchar * dms, int num)
 }
 
 
+/**
+ * COMMENT by Cofyc:
+ *
+ * Parse resource record section.
+ *
+ * `n` specifies number of records should be parsed.
+ */
+
 //when we insert "ttl expired" in the rbtree
 //if A or CNAME or MX or TXT or ... 's ttl is small, then we don't need to insert
 //NS's "ttl expired" element, we update the record at the same time when we
@@ -355,6 +363,13 @@ check_domain_mask(uchar * domain, uchar * origin, int len)
     return strncmp((const char *)origin, (const char *)domain, len);
 }
 
+
+/**
+ * COMMENT by Cofyc:
+ *
+ * Parse resource record to get `type`, `class`, `ttl`, `rdlength` info.
+ *
+ */
 
 int
 get_dns_info(uchar * label, ushort * tp, ushort * cls, uint * ttl,
@@ -889,6 +904,17 @@ make_dns_msg_for_new(uchar * itor, ushort msgid, uchar * d, int len, ushort type
     return buf - itor;          //msg len
 }
 
+/**
+ * COMMENT by Cofyc:
+ *
+ * Parse rdata according to its type and fill into buffer.
+ *
+ * `buffer`: buffer used to store rdata
+ * `label`: points to rdata
+ * `hdr`: header of message
+ * `lth`: length of rdata
+ * `type`: type of resource record
+ */
 
 //a,ns,txt,cname,soa,srv,aaaa,mx
 int
