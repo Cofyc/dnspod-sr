@@ -67,6 +67,13 @@ int ctl_fd(int epfd, int fd, int ctl, uint32_t events)
     return 0;
 }
 
+
+/**
+ * COMMENT BY COFYC
+ *
+ * Used to accept clients.
+ */
+
 int accept_client(int epfd, int sock)
 {
     int clifd;
@@ -114,6 +121,12 @@ int accept_client(int epfd, int sock)
 
     return clifd;
 }
+
+/**
+ * COMMENT BY COFYC
+ *
+ * Close connection as it's named.
+ */
 
 void disconnect_client(int epfd, int client)
 {
@@ -182,6 +195,13 @@ int cmd_analyze(char *str, uchar *domain, uint16_t *type)
     return cmd_type;
 }
 
+/**
+ * COMMENT BY COFYC
+ *
+ * handle commands
+ *
+ */
+
 int talk_with_client(int epfd, int client, struct server *s)
 {
     /*
@@ -210,6 +230,13 @@ int talk_with_client(int epfd, int client, struct server *s)
     }
     return 0;
 }
+
+/**
+ * COMMENT BY COFYC
+ *
+ * Local admin server used to accept commands.
+ *
+ */
 
 int start_local_server(struct server *s)
 {

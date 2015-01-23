@@ -263,7 +263,7 @@ check_dms(uchar * ck, uchar * dms, int num)
 
 
 /**
- * COMMENT by Cofyc:
+ * COMMENT BY COFYC:
  *
  * Parse resource record section.
  *
@@ -365,7 +365,7 @@ check_domain_mask(uchar * domain, uchar * origin, int len)
 
 
 /**
- * COMMENT by Cofyc:
+ * COMMENT BY COFYC:
  *
  * Parse resource record to get `type`, `class`, `ttl`, `rdlength` info.
  *
@@ -905,7 +905,7 @@ make_dns_msg_for_new(uchar * itor, ushort msgid, uchar * d, int len, ushort type
 }
 
 /**
- * COMMENT by Cofyc:
+ * COMMENT BY COFYC:
  *
  * Parse rdata according to its type and fill into buffer.
  *
