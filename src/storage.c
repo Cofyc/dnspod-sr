@@ -722,6 +722,17 @@ int append_value_to_he(struct hentry *he, uchar *val, int type, int replace,
     return ret;
 }
 
+/**
+ * COMMENT BY COFYC
+ *
+ * On collision:
+ *  - if replace is true and old value cannot be replaced, returns 2
+ *  - if replace is true and old value can be replaced, returns 1
+ *  - if replace is false, returns -1
+ * Not collided, add new value, returns 0.
+ *
+ */
+
 //if conllision, replace old element by default.
 //if replace is 1, replace it, return 1
 //if replace is 0, drop it, return -1

@@ -513,6 +513,11 @@ check_memcpy(uchar * to, uchar * from, int vlen)
     return 0;
 }
 
+/**
+ * COMMENT BY COFYC
+ *
+ * Insert record into rbtree and htable memory.
+ */
 
 //k and v both are in stack
 //k td

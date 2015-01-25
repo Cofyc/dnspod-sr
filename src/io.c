@@ -56,6 +56,12 @@ jump_space(uchar * itor)
 }
 
 
+/**
+ * COMMENT BY COFYC
+ *
+ * Load zone file into htable & rbtree.
+ */
+
 //ftp://ftp.internic.net/domain/root.zone
 //support type
 //A,
